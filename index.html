@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Page For Misti 📖</title>
+    <!-- Google Fonts se thoda aesthetic aur handwritten jaisa font add kiya hai -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            /* Aesthetic soft background */
+            background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+            font-family: 'Lora', serif; /* Diary jaisa elegant font */
+            overflow: hidden;
+        }
+
+        /* Diary Page ka Look */
+        .diary-card {
+            background: #fffafa;
+            padding: 40px 35px;
+            border-radius: 5px;
+            /* Paper jaisa shadow aur texture */
+            box-shadow: 10px 15px 40px rgba(0, 0, 0, 0.1), 
+                        inset 0 0 50px rgba(230, 220, 200, 0.2);
+            border-left: 6px solid #d4a373; /* Diary ki binding ka feel */
+            max-width: 420px;
+            width: 90%;
+            position: relative;
+            
+            /* Entry Animation */
+            animation: openDiary 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+            opacity: 0;
+            transform: translateY(30px) rotate(-2deg);
+        }
+
+        .date-stamp {
+            font-size: 0.9rem;
+            color: #888;
+            text-align: right;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            border-bottom: 1px dashed #ccc;
+            padding-bottom: 10px;
+        }
+
+        .highlight {
+            color: #e07a5f;
+            font-style: italic;
+        }
+
+        p {
+            color: #4a4a4a;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            margin-bottom: 18px;
+            text-align: justify;
+        }
+
+        .signature {
+            text-align: right;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-top: 25px;
+            font-size: 1.2rem;
+        }
+
+        /* Diary style button */
+        .btn-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 25px;
+            background: transparent;
+            color: #e07a5f;
+            text-decoration: none;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 1rem;
+            border: 2px solid #e07a5f;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            font-family: inherit;
+        }
+
+        .btn:hover {
+            background: #e07a5f;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(224, 122, 95, 0.3);
+        }
+
+        /* Smooth Diary Opening Animation */
+        @keyframes openDiary {
+            0% {
+                opacity: 0;
+                transform: translateY(40px) rotate(-5deg);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) rotate(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="diary-card">
+        <div class="date-stamp">Page 1: The One Who Stays 📖</div>
+        
+        <h1>Dear <span class="highlight">Misti</span>... ✨</h1>
+        
+        <p>Sometimes, I just sit and flip through the chapters of my life, and honestly? The pages with you in them are some of my absolute favorites. 📔💛</p>
+        
+        <p>You aren't just a friend. You are a safe space, a late-night listener, and someone who understands my unsaid words. In a world full of temporary moments, our bond feels like a permanent anchor. ⚓🧿</p>
+        
+        <p>No matter how chaotic things get, just knowing I have a close friend like you makes everything a little less heavy. Thank you for being your beautiful, genuine self. 🌸</p>
+        
+        <div class="signature">- Yours truly ✍️</div>
+
+        <div class="btn-container">
+            <button class="btn" onclick="alert('A small reminder: You are deeply appreciated, Misti! Never change. 🌻✨')">Unlock a Secret 🗝️</button>
+        </div>
+    </div>
+
+</body>
+</html>
